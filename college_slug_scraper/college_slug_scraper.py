@@ -23,7 +23,7 @@ i = 0
 for rookie in rookies:
     # create a new row
     row = {}
-    for r in rookies.fieldnames[:-1]:
+    for r in rookies.fieldnames:
         row[r] = rookie[r]
 
     player_name = rookie['name']
