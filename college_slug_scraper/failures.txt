@@ -1,0 +1,167 @@
+FAILED: Rick Mahorn
+URL: https://www.sports-reference.com/cbb/players/rick-mahorn-1.html
+CANT FIND
+
+FAILED: Carl Bailey
+URL: https://www.sports-reference.com/cbb/players/carl-bailey-1.html
+CANT FIND
+
+FAILED: Kevin Loder
+URL: https://www.sports-reference.com/cbb/players/kevin-loder-1.html
+CANT FIND
+
+FAILED: Clinton Wheeler
+URL: https://www.sports-reference.com/cbb/players/clinton-wheeler-1.html
+CANT FIND
+
+FAILED: Derrick Rowland
+URL: https://www.sports-reference.com/cbb/players/derrick-rowland-1.html
+CANT FIND
+
+FAILED: Mike Gibson
+URL: https://www.sports-reference.com/cbb/players/mike-gibson-1.html
+CANT FIND
+
+FAILED: Manute Bol
+URL: https://www.sports-reference.com/cbb/players/manute-bol-1.html
+CANT FIND
+
+FAILED: Sedale Threatt
+URL: https://www.sports-reference.com/cbb/players/sedale-threatt-1.html
+CANT FIND
+
+FAILED: Jerome Kersey
+URL: https://www.sports-reference.com/cbb/players/jerome-kersey-1.html
+CANT FIND
+
+FAILED: David Pope
+URL: https://www.sports-reference.com/cbb/players/david-pope-1.html
+CANT FIND
+
+FAILED: Eddie Lee Wilkins
+URL: https://www.sports-reference.com/cbb/players/eddie-lee-wilkins-1.html
+CANT FIND
+
+FAILED: Charles Oakley
+URL: https://www.sports-reference.com/cbb/players/charles-oakley-1.html
+CANT FIND
+
+FAILED: Terry Porter
+URL: https://www.sports-reference.com/cbb/players/terry-porter-1.html
+CANT FIND
+
+FAILED: Manute Bol
+URL: https://www.sports-reference.com/cbb/players/manute-bol-2.html
+CANT FIND
+
+FAILED: Mario Elie
+URL: https://www.sports-reference.com/cbb/players/mario-elie-1.html
+CANT FIND
+
+FAILED: Dennis Rodman
+URL: https://www.sports-reference.com/cbb/players/dennis-rodman-1.html
+CANT FIND
+
+FAILED: Keith Smith
+URL: https://www.sports-reference.com/cbb/players/keith-smith-1.html
+CORRECT: https://www.sports-reference.com/cbb/players/keith-smith-2.html
+
+FAILED: Scottie Pippen
+URL: https://www.sports-reference.com/cbb/players/scottie-pippen-1.html
+CANT FIND
+
+FAILED: Ron Moore
+URL: https://www.sports-reference.com/cbb/players/ron-moore-1.html
+CANT FIND
+
+FAILED: Jamie Waller
+URL: https://www.sports-reference.com/cbb/players/jamie-waller-1.html
+CANT FIND
+
+FAILED: Bart Kofoed
+URL: https://www.sports-reference.com/cbb/players/bart-kofoed-1.html
+CANT FIND
+
+FAILED: Nate Johnston
+URL: https://www.sports-reference.com/cbb/players/nate-johnston-1.html
+CANT FIND
+
+FAILED: Lamont Strothers
+URL: https://www.sports-reference.com/cbb/players/lamont-strothers-1.html
+CANT FIND
+
+FAILED: Martin Lewis
+URL: https://www.sports-reference.com/cbb/players/martin-lewis-1.html
+CANT FIND
+
+FAILED: Priest Lauderdale
+URL: https://www.sports-reference.com/cbb/players/priest-lauderdale-1.html
+CANT FIND
+
+FAILED: Chris Anstey
+URL: https://www.sports-reference.com/cbb/players/chris-anstey-1.html
+NO STATS
+
+FAILED: Stephen Jackson
+URL: https://www.sports-reference.com/cbb/players/stephen-jackson-1.html
+NO STATS
+
+FAILED: Aleksandar Radojević
+URL: https://www.sports-reference.com/cbb/players/aleksandar-radojević-1.html
+CANT FIND
+
+FAILED: Metta World Peace
+URL: https://www.sports-reference.com/cbb/players/metta-world-peace-1.html
+CANT FIND
+
+FAILED: Devean George
+URL: https://www.sports-reference.com/cbb/players/devean-george-1.html
+CANT FIND
+
+FAILED: Kedrick Brown
+URL: https://www.sports-reference.com/cbb/players/kedrick-brown-1.html
+CANT FIND
+
+FAILED: Qyntel Woods
+URL: https://www.sports-reference.com/cbb/players/qyntel-woods-1.html
+CANT FIND
+
+FAILED: Ronald Murray
+URL: https://www.sports-reference.com/cbb/players/ronald-murray-1.html
+CANT FIND
+
+FAILED: Jerome Beasley
+URL: https://www.sports-reference.com/cbb/players/jerome-beasley-1.html
+CANT FIND
+
+FAILED: Donta Smith
+URL: https://www.sports-reference.com/cbb/players/donta-smith-1.html
+CANT FIND
+
+FAILED: Viktor Sanikidze
+URL: https://www.sports-reference.com/cbb/players/viktor-sanikidze-1.html
+CANT FIND
+
+FAILED: Nathan Jawai
+URL: https://www.sports-reference.com/cbb/players/nathan-jawai-1.html
+CANT FIND
+
+FAILED: Thomas Robinson
+URL: https://www.sports-reference.com/cbb/players/thomas-robinson-1.html
+CORRECT: https://www.sports-reference.com/cbb/players/thomas-robinson-2.html
+
+FAILED: Bernard James
+URL: https://www.sports-reference.com/cbb/players/bernard-james-1.html
+CORRECT: https://www.sports-reference.com/cbb/players/bernard-james--1.html
+
+FAILED: Kyle Anderson
+URL: https://www.sports-reference.com/cbb/players/kyle-anderson-1.html
+CORRECT: https://www.sports-reference.com/cbb/players/kyle-anderson-3.html
+
+FAILED: Lonnie Walker
+URL: https://www.sports-reference.com/cbb/players/lonnie-walker-1.html
+CORRECT: https://www.sports-reference.com/cbb/players/lonnie-walker-2.html
+
+FAILED: Mitchell Robinson
+URL: https://www.sports-reference.com/cbb/players/mitchell-robinson-1.html
+SKIPPED COLLEGE
