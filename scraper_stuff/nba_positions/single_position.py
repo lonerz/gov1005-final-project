@@ -17,6 +17,10 @@ for row in positions:
 
     if slug not in seen:
         seen[slug] = 1
+
+        if '-' in row['pos']:
+            row['pos'] = row['pos'].split('-')[0]
+
         single_position.writerow(row)
 
 f.close()

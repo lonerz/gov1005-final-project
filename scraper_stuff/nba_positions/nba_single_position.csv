@@ -141,7 +141,7 @@ Oliver Robinson,robinol01,1982,24,1982-83,SAS,NBA,SG
 Bryan Warrick,warribr01,1982,25,1982-83,WSB,NBA,PG
 Fred Roberts,roberfr01,1982,27,1983-84,SAS,NBA,PF
 Dave Magley,magleda01,1982,28,1982-83,CLE,NBA,SF
-Scott Hastings,hastisc01,1982,29,1982-83,TOT,NBA,C-PF
+Scott Hastings,hastisc01,1982,29,1982-83,TOT,NBA,C
 Wallace Bryant,bryanwa01,1982,30,1983-84,CHI,NBA,C
 Rod Higgins,higgiro01,1982,31,1982-83,CHI,NBA,SF
 Richard Anderson,anderri01,1982,32,1982-83,SDC,NBA,C
@@ -160,7 +160,7 @@ Russ Schoene,schoeru01,1982,45,1982-83,TOT,NBA,PF
 Michael Wilson,wilsomi01,1982,47,1983-84,WSB,NBA,PG
 Craig Hodges,hodgecr01,1982,48,1982-83,SDC,NBA,SG
 Corny Thompson,thompco01,1982,50,1982-83,DAL,NBA,PF
-Jim Johnstone,johnsji01,1982,51,1982-83,TOT,NBA,PF-C
+Jim Johnstone,johnsji01,1982,51,1982-83,TOT,NBA,PF
 Jerry Eaves,eavesje01,1982,55,1982-83,UTA,NBA,PG
 Joe Kopicki,kopicjo01,1982,56,1982-83,WSB,NBA,PF
 Chris Engler,englech01,1982,60,1982-83,GSW,NBA,C
@@ -177,7 +177,7 @@ Rory White,whitero01,1982,86,1982-83,PHO,NBA,SF
 John Schweitz,schwejo01,1982,138,1984-85,SEA,NBA,SG
 Eddie Hughes,hugheed01,1982,140,1987-88,UTA,NBA,PG
 Ed Nealy,nealyed01,1982,166,1982-83,KCK,NBA,PF
-Dale Wilkinson,wilkida01,1982,221,1984-85,TOT,NBA,SF-PF
+Dale Wilkinson,wilkida01,1982,221,1984-85,TOT,NBA,SF
 Ralph Sampson,sampsra01,1983,1,1983-84,HOU,NBA,C
 Steve Stipanovich,stipast01,1983,2,1983-84,IND,NBA,C
 Rodney McCray,mccraro01,1983,3,1983-84,HOU,NBA,SF
@@ -286,14 +286,14 @@ Rick Carlisle,carliri01,1984,70,1984-85,BOS,NBA,SG
 Ralph Jackson,jacksra01,1984,71,1984-85,IND,NBA,PG
 Jim Grandholm,grandji01,1984,76,1990-91,DAL,NBA,PF
 Carl Henry,henryca01,1984,80,1985-86,SAC,NBA,SG
-Jim Rowinski,rowinji01,1984,86,1988-89,TOT,NBA,PF-C
+Jim Rowinski,rowinji01,1984,86,1988-89,TOT,NBA,PF
 Bob Thornton,thornbo01,1984,87,1985-86,NYK,NBA,PF
 Ozell Jones,jonesoz01,1984,90,1984-85,SAS,NBA,C
 McKinley Singleton,singlmc01,1984,120,1986-87,NYK,NBA,PG
 Eddie Lee Wilkins,wilkied01,1984,133,1984-85,NYK,NBA,C
 Kenton Edelin,edelike01,1984,140,1984-85,IND,NBA,SF
 Ken Bannister,bannike01,1984,156,1984-85,NYK,NBA,PF
-Brian Martin,martibr01,1984,185,1985-86,TOT,NBA,SF-PF
+Brian Martin,martibr01,1984,185,1985-86,TOT,NBA,SF
 Patrick Ewing,ewingpa01,1985,1,1985-86,NYK,NBA,C
 Wayman Tisdale,tisdawa01,1985,2,1985-86,IND,NBA,PF
 Benoit Benjamin,benjabe01,1985,3,1985-86,LAC,NBA,C
@@ -358,7 +358,7 @@ Dexter Shouse,shousde01,1985,92,1989-90,PHI,NBA,PG
 Ralph Lewis,lewisra01,1985,139,1987-88,DET,NBA,SG
 Michael Phelps,phelpmi01,1985,144,1985-86,SEA,NBA,SG
 Georgi Glouchkov,gloucge01,1985,148,1985-86,PHO,NBA,PF
-Mario Elie,eliema01,1985,160,1990-91,TOT,NBA,SF-SG
+Mario Elie,eliema01,1985,160,1990-91,TOT,NBA,SF
 Brad Daugherty,daughbr01,1986,1,1986-87,CLE,NBA,C
 Chris Washburn,washbch01,1986,3,1986-87,GSW,NBA,C
 Chuck Person,persoch01,1986,4,1986-87,IND,NBA,SF
@@ -371,14 +371,14 @@ Johnny Dawkins,dawkijo01,1986,10,1986-87,SAS,NBA,PG
 John Salley,sallejo01,1986,11,1986-87,DET,NBA,C
 John Williams,willijo02,1986,12,1986-87,WSB,NBA,SF
 Pearl Washington,washipe01,1986,13,1986-87,NJN,NBA,PG
-Walter Berry,berrywa01,1986,14,1986-87,TOT,NBA,SF-PF
+Walter Berry,berrywa01,1986,14,1986-87,TOT,NBA,SF
 Dell Curry,curryde01,1986,15,1986-87,UTA,NBA,SG
 Maurice Martin,martima01,1986,16,1986-87,DEN,NBA,SF
 Harold Pressley,pressha01,1986,17,1986-87,SAC,NBA,SF
 Mark Alarie,alarima01,1986,18,1986-87,DEN,NBA,PF
 Billy Thompson,thompbi01,1986,19,1986-87,LAL,NBA,SF
 Buck Johnson,johnsbu01,1986,20,1986-87,HOU,NBA,SF
-Anthony Jones,jonesan01,1986,21,1986-87,TOT,NBA,SF-SG
+Anthony Jones,jonesan01,1986,21,1986-87,TOT,NBA,SF
 Scott Skiles,skilesc01,1986,22,1986-87,MIL,NBA,PG
 Mark Price,pricema01,1986,25,1986-87,CLE,NBA,PG
 Greg Dreiling,dreilgr01,1986,26,1986-87,IND,NBA,C
@@ -399,7 +399,7 @@ Jeff Hornacek,hornaje01,1986,46,1986-87,PHO,NBA,SG
 Michael Jackson,jacksmi02,1986,47,1987-88,SAC,NBA,PG
 Forrest McKenzie,mckenfo01,1986,48,1986-87,SAS,NBA,SF
 Kevin Henderson,hendeke01,1986,50,1986-87,GSW,NBA,PG
-Mike Williams,willimi03,1986,51,1989-90,TOT,NBA,PF-SF
+Mike Williams,willimi03,1986,51,1989-90,TOT,NBA,PF
 Ricky Wilson,wilsori02,1986,52,1987-88,TOT,NBA,PG
 Tod Murphy,murphto01,1986,53,1987-88,LAC,NBA,PF
 Dwayne Polee,poleedw01,1986,54,1986-87,LAC,NBA,SG
@@ -454,7 +454,7 @@ Steve Alford,alforst01,1987,26,1987-88,DAL,NBA,PG
 Nate Blackwell,blackna01,1987,27,1987-88,SAS,NBA,PG
 Rickie Winslow,winslri01,1987,28,1987-88,MIL,NBA,SF
 Nikita Wilson,wilsoni01,1987,30,1987-88,POR,NBA,SF
-Andre Moore,moorean01,1987,31,1987-88,TOT,NBA,PF-SF
+Andre Moore,moorean01,1987,31,1987-88,TOT,NBA,PF
 Bob McCann,mccanbo01,1987,32,1989-90,DAL,NBA,SF
 Tony White,whiteto01,1987,33,1987-88,TOT,NBA,PG
 Brian Rowsom,rowsobr01,1987,34,1987-88,IND,NBA,PF
@@ -532,7 +532,7 @@ Steve Kerr,kerrst01,1988,50,1988-89,PHO,NBA,PG
 Rob Lock,lockro01,1988,51,1988-89,LAC,NBA,PF
 Anthony Mason,masonan01,1988,53,1989-90,NJN,NBA,PF
 Barry Sumpter,sumptba01,1988,56,1988-89,LAC,NBA,PF
-Nate Johnston,johnsna01,1988,59,1989-90,TOT,NBA,PF-SF
+Nate Johnston,johnsna01,1988,59,1989-90,TOT,NBA,PF
 Winston Bennett,bennewi01,1988,64,1989-90,CLE,NBA,SF
 Corey Gaines,gaineco01,1988,65,1988-89,NJN,NBA,SG
 Ricky Grace,graceri01,1988,67,1993-94,ATL,NBA,PG
@@ -908,7 +908,7 @@ Randy Livingston,livinra01,1996,42,1996-97,HOU,NBA,PG
 Ben Davis,davisbe01,1996,43,1996-97,PHO,NBA,PF
 Malik Rose,rosema01,1996,44,1996-97,CHH,NBA,PF
 Marcus Brown,brownma01,1996,46,1996-97,POR,NBA,PG
-Jamie Feick,feickja01,1996,48,1996-97,TOT,NBA,PF-C
+Jamie Feick,feickja01,1996,48,1996-97,TOT,NBA,PF
 Amal McCaskill,mccasam01,1996,49,1996-97,ORL,NBA,C
 Chris Robinson,robinch01,1996,51,1996-97,VAN,NBA,SG
 Mark Pope,popema01,1996,52,1997-98,IND,NBA,SF
@@ -1056,7 +1056,7 @@ Wang Zhizhi,zhizhwa01,1999,36,2000-01,DAL,NBA,C
 Obinna Ekezie,ekeziob01,1999,37,1999-00,VAN,NBA,PF
 Laron Profit,profila01,1999,38,1999-00,WAS,NBA,SG
 A.J. Bramlett,bramlaj01,1999,39,1999-00,CLE,NBA,C
-Gordan Giriček,giricgo01,1999,40,2002-03,TOT,NBA,SG-SF
+Gordan Giriček,giricgo01,1999,40,2002-03,TOT,NBA,SG
 Francisco Elson,elsonfr01,1999,41,2003-04,DEN,NBA,C
 Lee Nailon,nailole01,1999,43,2000-01,CHH,NBA,SF
 Ryan Robertson,roberry01,1999,45,1999-00,SAC,NBA,SG
@@ -1167,7 +1167,7 @@ Alvin Jones,jonesal01,2001,57,2001-02,PHI,NBA,C
 Yao Ming,mingya01,2002,1,2002-03,HOU,NBA,C
 Jay Williams,willija03,2002,2,2002-03,CHI,NBA,PG
 Mike Dunleavy,dunlemi02,2002,3,2002-03,GSW,NBA,SF
-Drew Gooden,goodedr01,2002,4,2002-03,TOT,NBA,SF-PF
+Drew Gooden,goodedr01,2002,4,2002-03,TOT,NBA,SF
 Nikoloz Tskitishvili,tskitni01,2002,5,2002-03,DEN,NBA,SF
 Dajuan Wagner,wagneda02,2002,6,2002-03,CLE,NBA,SG
 Nenê Hilário,hilarne01,2002,7,2002-03,DEN,NBA,C
@@ -1289,7 +1289,7 @@ Sasha Vujačić,vujacsa01,2004,27,2004-05,LAL,NBA,SG
 Beno Udrih,udrihbe01,2004,28,2004-05,SAS,NBA,PG
 David Harrison,harrida01,2004,29,2004-05,IND,NBA,C
 Anderson Varejão,varejan01,2004,30,2004-05,CLE,NBA,PF
-Jackson Vroman,vromaja01,2004,31,2004-05,TOT,NBA,C-PF
+Jackson Vroman,vromaja01,2004,31,2004-05,TOT,NBA,C
 Peter John Ramos,ramospe01,2004,32,2004-05,WAS,NBA,C
 Lionel Chalmers,chalmli01,2004,33,2004-05,LAC,NBA,PG
 Donta Smith,smithdo04,2004,34,2004-05,ATL,NBA,SG
@@ -1443,7 +1443,7 @@ Tiago Splitter,splitti01,2007,28,2010-11,SAS,NBA,C
 Alando Tucker,tuckeal02,2007,29,2007-08,PHO,NBA,SF
 Carl Landry,landrca01,2007,31,2007-08,HOU,NBA,PF
 Gabe Pruitt,pruitga01,2007,32,2007-08,BOS,NBA,PG
-Marcus Williams,willima04,2007,33,2007-08,TOT,NBA,PF-SF
+Marcus Williams,willima04,2007,33,2007-08,TOT,NBA,PF
 Nick Fazekas,fazekni01,2007,34,2007-08,TOT,NBA,PF
 Glen Davis,davisgl01,2007,35,2007-08,BOS,NBA,C
 Jermareo Davidson,davidje01,2007,36,2007-08,CHA,NBA,SF
@@ -1452,12 +1452,12 @@ Kyrylo Fesenko,fesenky01,2007,38,2007-08,UTA,NBA,C
 Sun Yue,yuesu01,2007,40,2008-09,LAL,NBA,SG
 Chris Richard,richach01,2007,41,2007-08,MIN,NBA,C
 Derrick Byars,byarsde01,2007,42,2011-12,SAS,NBA,PF
-Stéphane Lasme,lasmest01,2007,46,2007-08,TOT,NBA,PF-SF
+Stéphane Lasme,lasmest01,2007,46,2007-08,TOT,NBA,PF
 Dominic McGuire,mcguido01,2007,47,2007-08,WAS,NBA,SG
 Marc Gasol,gasolma01,2007,48,2008-09,MEM,NBA,C
 Aaron Gray,grayaa01,2007,49,2007-08,CHI,NBA,C
 JamesOn Curry,curryja01,2007,51,2009-10,LAC,NBA,PG
-Taurean Green,greenta01,2007,52,2007-08,TOT,NBA,SG-PG
+Taurean Green,greenta01,2007,52,2007-08,TOT,NBA,SG
 Demetris Nichols,nichode01,2007,53,2007-08,TOT,NBA,SF
 Ramon Sessions,sessira01,2007,56,2007-08,MIL,NBA,PG
 D.J. Strawberry,strawdj01,2007,59,2007-08,PHO,NBA,SG
@@ -1812,7 +1812,7 @@ Jarnell Stokes,stokeja01,2014,35,2014-15,MEM,NBA,PF
 Johnny O'Bryant,obryajo01,2014,36,2014-15,MIL,NBA,PF
 Spencer Dinwiddie,dinwisp01,2014,38,2014-15,DET,NBA,PG
 Jerami Grant,grantje01,2014,39,2014-15,PHI,NBA,SF
-Glenn Robinson,robingl02,2014,40,2014-15,TOT,NBA,SG-SF
+Glenn Robinson,robingl02,2014,40,2014-15,TOT,NBA,SG
 Nikola Jokić,jokicni01,2014,41,2015-16,DEN,NBA,C
 Nick Johnson,johnsni01,2014,42,2014-15,HOU,NBA,SG
 Edy Tavares,tavarwa01,2014,43,2015-16,ATL,NBA,C
