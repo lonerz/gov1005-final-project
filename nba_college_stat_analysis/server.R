@@ -2,6 +2,7 @@ library(shiny)
 library(cowplot)
 library(ggthemes)
 library(tidyverse)
+library(yardstick)
 
 college_totals_stats <- read_rds("college_totals_stats.rds")
 college_per_game_stats <- read_rds("college_per_game_stats.rds")
