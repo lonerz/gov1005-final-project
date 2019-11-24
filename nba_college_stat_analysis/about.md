@@ -9,3 +9,5 @@ The data for players in the NBA is scraped from [Basketball Reference](https://w
 ## About Me: Joshua Pan
 
 ## Source Code
+
+You can check the source code out on [GitHub](https://github.com/lonerz/gov1005-final-project).
