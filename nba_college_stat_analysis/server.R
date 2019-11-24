@@ -48,23 +48,17 @@ shinyServer(function(input, output) {
   ##########################
 
   positionModel.positions <- reactive({
-    cat("computing positions\n")
-
     joined_college_stats_nba_position %>%
       mutate(pos_binary = as.factor(ifelse(pos == input$positionModel.position, "1", "0"))) %>%
       filter(!is.na(get(input$positionModel.stat)))
   })
 
   output$positionModel.plot <- renderPlot({
-    cat("try rendering?\n")
-
     ggplot(positionModel.positions(), aes(x = pos_binary, y = get(input$positionModel.stat))) +
       geom_boxplot()
   })
   
   output$positionModel.accuracy <- renderTable({
-    cat("accuracy?\n")
-
     model <- glm(data = positionModel.positions(), formula = pos_binary ~ get(input$positionModel.stat), family = "binomial")
     
     pred <- positionModel.positions() %>%
