@@ -50,7 +50,7 @@ positionModel <- tabPanel(
   tabsetPanel(
     tabPanel(
       "Try it Yourself!",
-      h3("Can we predict a player's NBA position from one of their statistics?"),
+      h3("Can we predict a player's NBA position from one of their college statistics?"),
 
       # Get statistic name and position of player
 
@@ -63,7 +63,7 @@ positionModel <- tabPanel(
         ),
         selectInput(
           inputId = "positionModel.stat",
-          label = "Statistic:",
+          label = "College Statistic:",
           choices = stats_per_g,
           selected = "blk_per_g"
         )
@@ -82,6 +82,18 @@ positionModel <- tabPanel(
   )
 )
 
+funFacts <- tabPanel(
+  "Fun Facts!",
+  br(),
+  p("Here are some fun facts that I encountered while playing around with this dataset!"),
+  h2("Draft me again! 🙋"),
+  p("The only player to be drafted twice into the NBA was <name>"),
+  h2("The Nomad..🚶 "),
+  p("The following players played on the most number of teams in one single season"),
+  h2("The One Man Team 💪"),
+  p("The following players played the most number of different positions in their career")
+)
+
 shinyUI(fluidPage(
   theme = shinytheme("flatly"),
   # shinythemes::themeSelector(),
@@ -90,9 +102,7 @@ shinyUI(fluidPage(
     "Dunk on Some Stats",
     generalTrends,
     positionModel,
-    tabPanel(
-      "Fun Facts!"
-    ),
+    funFacts,
     tabPanel(
       "About",
       includeMarkdown("about.md")

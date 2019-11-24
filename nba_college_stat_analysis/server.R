@@ -57,14 +57,14 @@ shinyServer(function(input, output) {
     ggplot(positionModel.positions(), aes(x = pos_binary, y = get(input$positionModel.stat))) +
       geom_boxplot()
   })
-  
+
   output$positionModel.accuracy <- renderTable({
     model <- glm(data = positionModel.positions(), formula = pos_binary ~ get(input$positionModel.stat), family = "binomial")
-    
+
     pred <- positionModel.positions() %>%
       mutate(prediction = predict(model, type = "response")) %>%
       mutate(pred_binary = as.factor(ifelse(prediction > mean(prediction), "1", "0")))
-    
+
     metrics(pred, pos_binary, pred_binary)
   })
 })
