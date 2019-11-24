@@ -12,6 +12,8 @@ nba_per_game_stats_wo_tot <- read_rds("nba_per_game_stats_wo_tot.rds")
 nba_total_stats <- read_rds("nba_total_stats.rds")
 nba_total_stats_wo_tot <- read_rds("nba_total_stats_wo_tot.rds")
 
+joined_college_stats_nba_position <- read_rds("joined_college_stats_nba_position.rds")
+
 shinyServer(function(input, output) {
 
   ######################
