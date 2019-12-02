@@ -112,12 +112,12 @@ shinyUI(fluidPage(
   br(),
   navbarPage(
     "Dunk on Some Stats",
+    tabPanel(
+      "Introduction",
+      includeMarkdown("about.md")
+    ),
     generalTrends,
     positionModel,
-    funFacts,
-    tabPanel(
-      "About",
-      includeMarkdown("about.md")
-    )
+    funFacts
   )
 ))
