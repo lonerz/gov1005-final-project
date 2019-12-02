@@ -2,6 +2,7 @@ library(shiny)
 library(shinythemes)
 library(markdown)
 library(plotly)
+library(DT)
 
 stats <- c(
   "g", "gs", "mp", "fg", "fga", "fg_pct", "fg2", "fg2a", "fg2_pct", "fg3", "fg3a",
@@ -45,12 +46,14 @@ generalTrends <- tabPanel(
       mainPanel(
         plotlyOutput("generalTrend.plot", height = "500px"),
         br(),
-        
+
         # Nasty syntax here because of link: https://stackoverflow.com/questions/39132318/shiny-nesting-a-link-within-a-paragraph-has-unwanted-whitespace
-        
-        p("Notice a large dip in many statistics during the NBA season 1998-1999. This was the ",
+
+        p(
+          "Notice a large dip in many statistics during the NBA season 1998-1999. This was the ",
           a(href = "https://en.wikipedia.org/wiki/1998%E2%80%9399_NBA_season", "1999 NBA lockout", .noWS = "outside"),
-          ".")
+          "."
+        )
       )
     )
   )
@@ -101,12 +104,14 @@ funFacts <- tabPanel(
   "Fun Facts!",
   br(),
   p("Here are some fun facts that I encountered while playing around with this dataset!"),
-  h2("Ooooh, Pick Me, Pick Me! 🙋"),
-  p("The only player to be drafted twice into the NBA was <name>"),
-  t2("The Nomad..🚶 "),
-  p("The following players played on the most number of teams in one single season"),
-  h2("The One Man Team 💪"),
-  p("The following players played the most number of different positions in their career")
+  h2("Ooooh, Pick Me, Pick Me!"),
+  p("The only player to be drafted 'twice' into the NBA was ", a(href = "https://en.wikipedia.org/wiki/Manute_Bol#Early_basketball_career", "Manute Bol", .noWS = "outside"), "."),
+  h2("The Nomad.."),
+  p("The following players played on the most number of different teams in one single season:"),
+  DTOutput("funFacts.diffTeams"),
+  h2("The One Man Team"),
+  p("The following players played the most number of different positions in their career:"),
+  DTOutput("funFacts.diffPositions")
 )
 
 shinyUI(fluidPage(

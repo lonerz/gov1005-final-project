@@ -42,3 +42,6 @@ joined_college_stats_nba_position <- average_college_per_game_stats %>%
   filter(!is.na(pos))
 
 write_rds(joined_college_stats_nba_position, "nba_college_stat_analysis/joined_college_stats_nba_position.rds")
+
+nba_positions <- read_csv("final_csv/nba_positions.csv")
+write_rds(nba_positions, "nba_college_stat_analysis/nba_positions.rds")
