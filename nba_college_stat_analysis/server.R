@@ -36,8 +36,9 @@ shinyServer(function(input, output) {
 
     average_total_stats <- function(total_stats) {
       total_stats %>%
+        filter(season >= "1980-81") %>%
         group_by(season) %>%
-        summarize(var_avg = mean(get(input$generalTrend.stat), na.rm = TRUE)) %>%
+        summarize(var_avg = mean(get(translate[[input$generalTrend.stat]]), na.rm = TRUE)) %>%
         replace_na(replace = list(var_avg = 0))
     }
 
@@ -52,7 +53,7 @@ shinyServer(function(input, output) {
       plot_ly(x = ~season, y = ~var_avg, color = ~league, type = "scatter", mode = "lines+markers") %>%
       layout(
         xaxis = list(title = "Season"),
-        yaxis = list(title = paste("Average Player", input$generalTrend.stat, ""))
+        yaxis = list(title = paste("Mean  Total Season", input$generalTrend.stat))
       ) %>%
       config(displayModeBar = FALSE)
   })
