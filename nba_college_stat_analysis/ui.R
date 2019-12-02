@@ -19,14 +19,14 @@ generalTrends <- tabPanel(
       # Get statistic name to plot general trend
 
       sidebarPanel(
-        h5("The graph shows the average/mean of player season totals for the selected player statistic over every season from 1980."),
-        h5("For example, the mean number of total season 3-point field goals of all players over each season is increasing quite dramatically. The 3-point shot has really evolved in basketball techniques over the last 30 years. Just look at Steph Curry!"),
         selectInput(
           inputId = "generalTrend.stat",
           label = "Player Statistic:",
           choices = stats_english,
           selected = "3-Point Field Goals"
-        )
+        ),
+        h5("The graph shows the average/mean of player season totals for the selected player statistic over every season from 1980."),
+        h5("For example, the mean season total 3-point field goals over all players is increasing each season quite dramatically. The 3-point shot has really evolved in basketball over the last 30 years. Just look at Steph Curry!")
       ),
 
       # Plot the general trend for selected statistic
@@ -96,12 +96,12 @@ funFacts <- tabPanel(
   "Fun Facts!",
   br(),
   p("Here are some fun facts that I encountered while playing around with this dataset!"),
-  h2("Ooooh, Pick Me, Pick Me!"),
+  h2("Ooooh, Pick Me, Pick Me! 🙋"),
   p("The only player to be drafted 'twice' into the NBA was ", a(href = "https://en.wikipedia.org/wiki/Manute_Bol#Early_basketball_career", "Manute Bol", .noWS = "outside"), "."),
-  h2("The Nomad.."),
+  h2("The Nomad.. 🚶"),
   p("The following players played on the most number of different teams in one single season:"),
   DTOutput("funFacts.diffTeams"),
-  h2("The One Man Team"),
+  h2("The One Man Team 💪"),
   p("The following players played the most number of different positions in their career:"),
   DTOutput("funFacts.diffPositions")
 )
