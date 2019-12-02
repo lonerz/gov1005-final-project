@@ -23,10 +23,15 @@ stats_per_g <- c(
   "pf_per_g", "pts_per_g"
 )
 
+stats_per_g_english <- c("Games", "Games Started", map_chr(stats_english[3:24], ~paste(.x, "Per Game")))
+
 positions <- c("C", "SG", "PF", "PG", "SF")
 
 positions_english <- c("Center", "Shooting Guard", "Power Forward", "Point Guard", "Small Forward")
 
-translate <- dict(init_keys = c(stats_english), init_values = c(stats))
+translate <- dict(
+  init_keys = c(stats_english, positions_english, stats_per_g_english),
+  init_values = c(stats, positions, stats_per_g)
+)
 
 

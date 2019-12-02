@@ -4,7 +4,7 @@ In the age of technology, the amount of National Basketball Association (NBA) an
 
 ## Background
 
-The National Basketball Association (NBA) is the men's professional basketball league in North America, composed of 30 teams. It is considered the "premier basketball league in the world." The NBA has an annual draft, called the NBA draft, which NBA teams can draft eligible players into the league. These players are typically college players, but international players are also eligible to be drafted. **My project only looks at players who were drafted into the NBA.**
+The National Basketball Association (NBA) is the men's professional basketball league in North America, composed of 30 teams. It is considered the "premier basketball league in the world." The NBA has an annual draft, called the NBA draft, which NBA teams can draft eligible players into the league. These players are typically college players, but international players are also eligible to be drafted. **My project only considers players who were drafted into the NBA.**
 
 The game of basketball is rather complex, with 5 players on each team competing on the court to make as many points as possible while trying not to commit fouls. Each of the 5 players usually play different positions: point guard, shooting guard, small forward, power forward, and center. If you are not familiar with these positions, read more about it [here](https://en.wikipedia.org/wiki/Basketball_positions).
 

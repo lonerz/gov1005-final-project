@@ -56,22 +56,23 @@ positionModel <- tabPanel(
   tabsetPanel(
     tabPanel(
       "Try it Yourself!",
-      h3("Can we predict a player's NBA position from one of their college statistics?"),
+      h3("Can we predict a player's NBA position from one of their college player statistics?"),
+      br(),
 
       # Get statistic name and position of player
 
       sidebarPanel(
         selectInput(
           inputId = "positionModel.position",
-          label = "Position:",
-          choices = positions,
-          selected = "C"
+          label = "NBA Position To Predict:",
+          choices = positions_english,
+          selected = "Center"
         ),
         selectInput(
           inputId = "positionModel.stat",
-          label = "College Statistic:",
-          choices = stats_per_g,
-          selected = "blk_per_g"
+          label = "College Player Statistic:",
+          choices = stats_per_g_english,
+          selected = "Blocks Per Game"
         )
       ),
 

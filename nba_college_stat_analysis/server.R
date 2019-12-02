@@ -64,17 +64,17 @@ shinyServer(function(input, output) {
 
   positionModel.positions <- reactive({
     joined_college_stats_nba_position %>%
-      mutate(pos_binary = as.factor(ifelse(pos == input$positionModel.position, "1", "0"))) %>%
-      filter(!is.na(get(input$positionModel.stat)))
+      mutate(pos_binary = as.factor(ifelse(pos == translate[[input$positionModel.position]], "1", "0"))) %>%
+      filter(!is.na(get(translate[[input$positionModel.stat]])))
   })
 
   output$positionModel.plot <- renderPlot({
-    ggplot(positionModel.positions(), aes(x = pos_binary, y = get(input$positionModel.stat))) +
+    ggplot(positionModel.positions(), aes(x = pos_binary, y = get(translate[[input$positionModel.stat]]))) +
       geom_boxplot()
   })
 
   output$positionModel.accuracy <- renderTable({
-    model <- glm(data = positionModel.positions(), formula = pos_binary ~ get(input$positionModel.stat), family = "binomial")
+    model <- glm(data = positionModel.positions(), formula = pos_binary ~ get(translate[[input$positionModel.stat]]), family = "binomial")
 
     pred <- positionModel.positions() %>%
       mutate(prediction = predict(model, type = "response")) %>%
