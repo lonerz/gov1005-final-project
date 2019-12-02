@@ -6,6 +6,7 @@ library(yardstick)
 library(plotly)
 library(DT)
 library(tidymodels)
+library(scales)
 
 # Import the lovely RDS files I created with csv_to_rds.R
 
@@ -59,42 +60,38 @@ shinyServer(function(input, output) {
       config(displayModeBar = FALSE)
   })
 
+
+
   ######################
   ### Position model ###
   ######################
 
-  positionModel.positions <- reactive({
-    joined_college_stats_nba_position %>%
-      mutate(pos_binary = as.factor(ifelse(pos == translate[[input$positionModel.position]], "1", "0"))) %>%
-      filter(!is.na(get(translate[[input$positionModel.stat]])))
-  })
-
   # The whole point of this boxplot is to provide a visualization to understand the distribution
   # of the selected player statistic depending on if the player ended up playing that position in
   # the NBA or not. I'll break down the code line-by-line (-ish).
-  
+
   output$positionModel.plotly <- renderPlotly({
     joined_college_stats_nba_position %>%
-      
+
       # We don't want players who didn't have that player statistic. Older years, they did
       # not keep track of certain statistics, so we will not penalize players who don't
       # have that statistic by just removing them.
-      
+
       filter(!is.na(get(translate[[input$positionModel.stat]]))) %>%
-      
+
       # We create a "Position" and "Not a Position" binary factor. It just compares every player
       # and sees if that player's NBA position is equal to the one selected by the user.
-      
+
       mutate(pos_binary = ifelse(pos == translate[[input$positionModel.position]],
         input$positionModel.position,
         paste("Not a", input$positionModel.position)
       )) %>%
-      
+
       # Finally, the plotting. Nothing special here. We want the distribution of the player
       # statistic by the player position, so we set those to the y-axis and x-axis respectively.
       # Color it up and make it into a box plot. The special x-axis layout is to make sure
       # that the boxplot will always show "Not a Position" and then "Position" on the x-axis.
-      
+
       plot_ly(
         x = ~pos_binary,
         y = ~ get(translate[[input$positionModel.stat]]),
@@ -114,15 +111,55 @@ shinyServer(function(input, output) {
       config(displayModeBar = FALSE)
   })
 
-  output$positionModel.accuracy <- renderTable({
-    model <- glm(data = positionModel.positions(), formula = pos_binary ~ get(translate[[input$positionModel.stat]]), family = "binomial")
+  # Visualizing is one thing. We should actually create a model out of this to predict a player's NBA
+  # position from their college basketball player statistics. I'll break down the following again
+  # line-by-line (-ish).
 
-    pred <- positionModel.positions() %>%
-      mutate(prediction = predict(model, type = "response")) %>%
-      mutate(pred_binary = as.factor(ifelse(prediction > mean(prediction), "1", "0")))
+  output$positionModel.accuracy <- renderDT({
 
-    metrics(pred, pos_binary, pred_binary)
+    # We first clean our data (really similarly to above). Take out the players who don't have that
+    # specific college player statistic. Then we create a binary factor to represent if the player
+    # ended up playing that NBA position or not.
+
+    positions <-
+      joined_college_stats_nba_position %>%
+      mutate(pos_binary = as.factor(ifelse(pos == translate[[input$positionModel.position]], "1", "0"))) %>%
+      filter(!is.na(get(translate[[input$positionModel.stat]])))
+
+    # Then we actually create our logistic regression (fancy for predicting 0s and 1s given an input).
+    # We want to explain the NBA position (pos_binary) with the college stat (input$positionModel.stat).
+
+    logistic_reg() %>%
+      set_engine("glm") %>%
+      fit(pos_binary ~ get(translate[[input$positionModel.stat]]), data = positions) %>%
+
+      # Then, we actually use the model we created to predict our original values. The reason
+      # why I use probability instead of the built-in prediction is that I don't need to be 50% certain
+      # that a player played a certain position in the NBA. I just need to be MORE certain that that
+      # player played a certain position over others. That is why I use probability and compare that
+      # probability to the mean of all probabilities: mean(.pred1)
+
+      predict(new_data = positions, type = "prob") %>%
+      mutate(pred_binary = as.factor(ifelse(.pred_1 > mean(.pred_1), "1", "0"))) %>%
+      bind_cols(positions) %>%
+
+      # Finally, we use the metrics function to compute accuracy and kappa metrics. And display them
+      # as percentages, so they are easier to understand in a nice datatable.
+
+      metrics(truth = pos_binary, estimate = pred_binary) %>%
+      select(.metric, .estimate) %>%
+      mutate(.estimate = percent(.estimate, accuracy = 0.01)) %>%
+      datatable(
+        colnames = c("Metric", "Estimate"),
+        rownames = FALSE,
+        options = list(
+          dom = "t",
+          columnDefs = list(list(className = "dt-center", targets = "_all"))
+        )
+      )
   })
+
+
 
   #################
   ### Fun facts ###
@@ -147,7 +184,11 @@ shinyServer(function(input, output) {
       datatable(
         colnames = c("Name", "Season", "Number of Different Teams"),
         rownames = FALSE,
-        options = list(dom = "tp", pageLength = 5)
+        options = list(
+          dom = "tp",
+          pageLength = 5,
+          columnDefs = list(list(className = "dt-center", targets = "_all"))
+        )
       )
   })
 
@@ -168,7 +209,11 @@ shinyServer(function(input, output) {
       datatable(
         colnames = c("Name", "Draft Year", "Number of Different Positions"),
         rownames = FALSE,
-        options = list(dom = "tp", pageLength = 5)
+        options = list(
+          dom = "tp",
+          pageLength = 5,
+          columnDefs = list(list(className = "dt-center", targets = "_all"))
+        )
       )
   })
 })
