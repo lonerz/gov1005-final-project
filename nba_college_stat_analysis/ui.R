@@ -1,6 +1,7 @@
 library(shiny)
 library(shinythemes)
 library(markdown)
+library(plotly)
 
 stats <- c(
   "g", "gs", "mp", "fg", "fga", "fg_pct", "fg2", "fg2a", "fg2_pct", "fg3", "fg3a",
