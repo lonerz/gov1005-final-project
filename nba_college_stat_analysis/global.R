@@ -3,6 +3,7 @@
 # set of names. So, this is what the dictionary translate does.
 
 library(dict)
+library(purrr)
 
 stats <- c(
   "g", "gs", "mp", "fg", "fga", "fg_pct", "fg2", "fg2a", "fg2_pct", "fg3", "fg3a",
