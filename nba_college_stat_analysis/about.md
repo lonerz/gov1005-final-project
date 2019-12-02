@@ -16,6 +16,8 @@ The data for players in the NBA is scraped from [Basketball Reference](https://w
 
 ## About Me: Joshua Pan
 
+I'm currently a sophomore at Harvard University, studying Computer Science with a focus in theoretical computer science and systems programming. You can find me on [LinkedIn](https://www.linkedin.com/in/joshuadpan/) and [GitHub](https://github.com/lonerz). Would love to connect with you!
+
 ## Source Code
 
 You can check the source code out on [GitHub](https://github.com/lonerz/gov1005-final-project).

@@ -5,6 +5,7 @@ library(tidyverse)
 library(yardstick)
 library(plotly)
 library(DT)
+library(tidymodels)
 
 # Import the lovely RDS files I created with csv_to_rds.R
 
@@ -53,7 +54,7 @@ shinyServer(function(input, output) {
       plot_ly(x = ~season, y = ~var_avg, color = ~league, type = "scatter", mode = "lines+markers") %>%
       layout(
         xaxis = list(title = "Season"),
-        yaxis = list(title = paste("Mean  Total Season", input$generalTrend.stat))
+        yaxis = list(title = paste("Average Total Season", input$generalTrend.stat))
       ) %>%
       config(displayModeBar = FALSE)
   })
@@ -68,9 +69,49 @@ shinyServer(function(input, output) {
       filter(!is.na(get(translate[[input$positionModel.stat]])))
   })
 
-  output$positionModel.plot <- renderPlot({
-    ggplot(positionModel.positions(), aes(x = pos_binary, y = get(translate[[input$positionModel.stat]]))) +
-      geom_boxplot()
+  # The whole point of this boxplot is to provide a visualization to understand the distribution
+  # of the selected player statistic depending on if the player ended up playing that position in
+  # the NBA or not. I'll break down the code line-by-line (-ish).
+  
+  output$positionModel.plotly <- renderPlotly({
+    joined_college_stats_nba_position %>%
+      
+      # We don't want players who didn't have that player statistic. Older years, they did
+      # not keep track of certain statistics, so we will not penalize players who don't
+      # have that statistic by just removing them.
+      
+      filter(!is.na(get(translate[[input$positionModel.stat]]))) %>%
+      
+      # We create a "Position" and "Not a Position" binary factor. It just compares every player
+      # and sees if that player's NBA position is equal to the one selected by the user.
+      
+      mutate(pos_binary = ifelse(pos == translate[[input$positionModel.position]],
+        input$positionModel.position,
+        paste("Not a", input$positionModel.position)
+      )) %>%
+      
+      # Finally, the plotting. Nothing special here. We want the distribution of the player
+      # statistic by the player position, so we set those to the y-axis and x-axis respectively.
+      # Color it up and make it into a box plot. The special x-axis layout is to make sure
+      # that the boxplot will always show "Not a Position" and then "Position" on the x-axis.
+      
+      plot_ly(
+        x = ~pos_binary,
+        y = ~ get(translate[[input$positionModel.stat]]),
+        color = ~pos_binary,
+        type = "box"
+      ) %>%
+      layout(
+        title = paste("Distribution of", input$positionModel.stat, "By Player Position"),
+        xaxis = list(
+          title = "",
+          categoryorder = "array",
+          categoryarray = c(paste("Not a", input$positionModel.position), input$positionModel.position)
+        ),
+        yaxis = list(title = input$positionModel.stat)
+      ) %>%
+      hide_legend() %>%
+      config(displayModeBar = FALSE)
   })
 
   output$positionModel.accuracy <- renderTable({

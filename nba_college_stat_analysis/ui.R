@@ -79,7 +79,7 @@ positionModel <- tabPanel(
       # Plot the boxplot for the position vs. stat
 
       mainPanel(
-        plotOutput("positionModel.plot"),
+        plotlyOutput("positionModel.plotly"),
         tableOutput("positionModel.accuracy")
       )
     ),

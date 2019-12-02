@@ -15,7 +15,8 @@ stats_english <- c(
   "Field Goal Percentage", "2-Point Field Goals", "2-Point Field Goal Attempts", "2-Point Field Goal Percentage",
   "3-Point Field Goals", "3-Point Field Goal Attempts", "3-Point Field Goal Percentage",
   "Free Throws", "Free Throw Attempts", "Free Throw Percentage", "Offensive Rebounds", "Defensive Rebounds",
-  "Total Rebounds", "Assists", "Steals", "Blocks", "Turnovers", "Personal Fouls", "Points")
+  "Total Rebounds", "Assists", "Steals", "Blocks", "Turnovers", "Personal Fouls", "Points"
+)
 
 stats_per_g <- c(
   "g", "gs", "mp_per_g", "fg_per_g", "fga_per_g", "fg_pct", "fg2_per_g", "fg2a_per_g",
@@ -24,15 +25,17 @@ stats_per_g <- c(
   "pf_per_g", "pts_per_g"
 )
 
-stats_per_g_english <- c("Games", "Games Started", map_chr(stats_english[3:24], ~paste(.x, "Per Game")))
+stats_per_g_english <- c("Games", "Games Started", map_chr(stats_english[3:24], ~ paste(.x, "Per Game")))
 
-positions <- c("C", "SG", "PF", "PG", "SF")
+positions <- c("PG", "C", "SG", "PF", "SF")
 
-positions_english <- c("Center", "Shooting Guard", "Power Forward", "Point Guard", "Small Forward")
+positions_english <- c("Point Guard", "Center", "Shooting Guard", "Power Forward", "Small Forward")
+
+# We have to do 3:24 for stats_per_g because stats_per_g and stats share the first
+# two terms (Games and Games Played), which are identical. Thus, it messes up the
+# dictionary if we add them again.
 
 translate <- dict(
-  init_keys = c(stats_english, positions_english, stats_per_g_english),
-  init_values = c(stats, positions, stats_per_g)
+  init_keys = c(stats_english, positions_english, stats_per_g_english[3:24]),
+  init_values = c(stats, positions, stats_per_g[3:24])
 )
-
-
