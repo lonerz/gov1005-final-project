@@ -16,19 +16,24 @@ stats_per_g <- c(
 
 positions <- c("C", "SG", "PF", "PG", "SF")
 
+######################
+### General trends ###
+######################
+
 generalTrends <- tabPanel(
   "General Trends",
   tabsetPanel(
     tabPanel(
-      "Trends by Season",
-      h3("What are some trends for the NBA and NCAA over seasons?"),
+      "Player Statistics by Season",
+      h3("What are some player statistics trends over seasons?"),
+      br(),
 
       # Get statistic name to plot general trend
 
       sidebarPanel(
         selectInput(
           inputId = "generalTrend.stat",
-          label = "Statistic:",
+          label = "Player Statistic:",
           choices = stats,
           selected = "fg3"
         )
@@ -37,13 +42,22 @@ generalTrends <- tabPanel(
       # Plot the general trend for selected statistic
 
       mainPanel(
-        plotOutput("generalTrend.plot"),
+        plotlyOutput("generalTrend.plot", height = "500px"),
         br(),
-        p("Notice a large dip in many statistics during the NBA season 1998-1999. This was because of the 1999 NBA lockout. You can read more about it here: https://en.wikipedia.org/wiki/1998%E2%80%9399_NBA_season.")
+        
+        # Nasty syntax here because of link: https://stackoverflow.com/questions/39132318/shiny-nesting-a-link-within-a-paragraph-has-unwanted-whitespace
+        
+        p("Notice a large dip in many statistics during the NBA season 1998-1999. This was the ",
+          a(href = "https://en.wikipedia.org/wiki/1998%E2%80%9399_NBA_season", "1999 NBA lockout", .noWS = "outside"),
+          ".")
       )
     )
   )
 )
+
+######################
+### Position model ###
+######################
 
 positionModel <- tabPanel(
   "NBA Position Model",
@@ -86,9 +100,9 @@ funFacts <- tabPanel(
   "Fun Facts!",
   br(),
   p("Here are some fun facts that I encountered while playing around with this dataset!"),
-  h2("Draft me again! 🙋"),
+  h2("Ooooh, Pick Me, Pick Me! 🙋"),
   p("The only player to be drafted twice into the NBA was <name>"),
-  h2("The Nomad..🚶 "),
+  t2("The Nomad..🚶 "),
   p("The following players played on the most number of teams in one single season"),
   h2("The One Man Team 💪"),
   p("The following players played the most number of different positions in their career")
