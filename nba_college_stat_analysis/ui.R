@@ -81,7 +81,7 @@ positionModel <- tabPanel(
       # Plot the boxplot for the position vs. stat
 
       mainPanel(
-        plotlyOutput("positionModel.plotly"),
+        plotlyOutput("positionModel.plotly", height = "300px"),
         h4("How good is the model?"),
         p("Data visualization aside, I created a practical model that takes as input the player's college player statistic (like Blocks Per Game) and predicts if that player played a certain NBA position (like Center)."),
         p("To see if a model is good (accurate), we can calculate its performance in two ways. One is ", tags$b("accuracy", .noWS = "outside"), ": what percentage of players did the model predict their NBA positions correctly? And the other is", tags$b("Kappa"), "(kap for short): how much better is our model than a model that just randomly guesses?"),
