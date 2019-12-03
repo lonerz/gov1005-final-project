@@ -26,7 +26,10 @@ generalTrends <- tabPanel(
           selected = "3-Point Field Goals"
         ),
         p("The graph shows the average/mean of player season totals for the selected player statistic over every season from 1980."),
-        p("For example, the mean season total 3-point field goals over all players is increasing each season quite dramatically. The 3-point shot has really evolved in basketball over the last 30 years. Just look at Steph Curry!")
+        p(
+          "For example, the mean season total 3-point field goals over all players is increasing each season quite dramatically.",
+          "The 3-point shot has really evolved in basketball over the last 30 years. Just look at Steph Curry!"
+        )
       ),
 
       # Plot the general trend for selected statistic
@@ -74,8 +77,14 @@ positionModel <- tabPanel(
           choices = stats_per_g_english,
           selected = "Blocks Per Game"
         ),
-        p("The boxplot shows the distribution of the selected college player statistic depending on if that player ended up playing the selected NBA position or not. This can give you a good sense if your model is going to do well or not."),
-        p("For example, for college player statistic 'Blocks Per Game', it seems like players that ended up playing Center in the NBA had relatively higher number of blocks than a non-Center player. This makes sense because Centers are usually tallest and thus block more people!")
+        p(
+          "The boxplot shows the distribution of the selected college player statistic depending on if that player ended up playing the selected NBA position or not.",
+          "This can give you a good sense if your model is going to do well or not."
+        ),
+        p(
+          "For example, for college player statistic 'Blocks Per Game', it seems like players that ended up playing Center in the NBA had relatively higher number of blocks than a non-Center player.",
+          "This makes sense because Centers are usually tallest and thus block more people!"
+        )
       ),
 
       # Plot the boxplot for the position vs. stat
@@ -84,10 +93,17 @@ positionModel <- tabPanel(
         plotlyOutput("positionModel.plotly", height = "300px"),
         h4("How good is the model?"),
         p("Data visualization aside, I created a practical model that takes as input the player's college player statistic (like Blocks Per Game) and predicts if that player played a certain NBA position (like Center)."),
-        p("To see if a model is good (accurate), we can calculate its performance in two ways. One is ", tags$b("accuracy", .noWS = "outside"), ": what percentage of players did the model predict their NBA positions correctly? And the other is", tags$b("Kappa"), "(kap for short): how much better is our model than a model that just randomly guesses?"),
+        p(
+          "To see if a model is good (accurate), we can calculate its performance in two ways.",
+          "One is ", strong("accuracy", .noWS = "outside"), ": what percentage of players did the model predict their NBA positions correctly?",
+          "And the other is", strong("Kappa"), "(kap for short): how much better is our model than a model that just randomly guesses?"
+        ),
         DTOutput("positionModel.accuracy"),
         br(),
-        h6("*I used a logistic regression to predict player's NBA position from a player's college player statistic. You can read more about the Kappa coefficient metric ", a("here", href = "https://en.wikipedia.org/wiki/Cohen%27s_kappa", .noWS = "outside"), ".")
+        h6(
+          "*I used a logistic regression to predict player's NBA position from a player's college player statistic.",
+          "You can read more about the Kappa coefficient metric ", a("here", href = "https://en.wikipedia.org/wiki/Cohen%27s_kappa", .noWS = "outside"), "."
+        )
       )
     ),
     tabPanel(
@@ -96,9 +112,9 @@ positionModel <- tabPanel(
   )
 )
 
-######################
+#################
 ### Fun facts ###
-######################
+#################
 
 funFacts <- tabPanel(
   "Fun Facts!",
