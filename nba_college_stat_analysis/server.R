@@ -30,7 +30,7 @@ shinyServer(function(input, output) {
   ### General trends ###
   ######################
 
-  output$generalTrend.plot <- renderPlotly({
+  output$generalTrend.statPlot <- renderPlotly({
 
     # Given total stats from NBA or NCAA, we can compute the mean total for the specific statistic
     # input$generalTrend.stat for each player who played by season. We replace NAs with 0 because
@@ -60,6 +60,42 @@ shinyServer(function(input, output) {
       config(displayModeBar = FALSE)
   })
 
+  colorForPosition <- function(position) {
+    # The order: c("Point Guard", "Center", "Shooting Guard", "Power Forward", "Small Forward")
+    colors <- c("rgb(141, 160, 203)", "rgb(102, 194, 165)", "rgb(166, 216, 84)", "rgb(252, 141, 98)", "rgb(231, 138, 195)")
+    colors[which(positions_english == position)]
+  }
+
+  output$generalTrend.positionPlot <- renderPlotly({
+    nba_single_position %>%
+
+      # Filter by the specific position chosen by the user
+
+      filter(pos == translate[[input$generalTrend.position]]) %>%
+
+      # Then we group by draft_year (and position if we are plotting everything) and count
+      # the number of people who played that position for that draft year
+
+      group_by(pos, draft_year) %>%
+      summarize(pos_count = n()) %>%
+
+      # Finally, we plot just like above
+
+      plot_ly(
+        x = ~draft_year,
+        y = ~pos_count,
+        color = ~pos,
+        type = "scatter",
+        mode = "lines+markers",
+        line = list(color = colorForPosition(input$generalTrend.position)),
+        marker = list(color = colorForPosition(input$generalTrend.position))
+      ) %>%
+      layout(
+        xaxis = list(title = "Draft Class"),
+        yaxis = list(title = paste("Number of ", input$generalTrend.position, "s Drafted", sep = ""))
+      ) %>%
+      config(displayModeBar = FALSE)
+  })
 
 
   ######################

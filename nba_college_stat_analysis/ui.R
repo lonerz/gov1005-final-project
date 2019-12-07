@@ -35,7 +35,7 @@ generalTrends <- tabPanel(
       # Plot the general trend for selected statistic
 
       mainPanel(
-        plotlyOutput("generalTrend.plot", height = "500px"),
+        plotlyOutput("generalTrend.statPlot", height = "500px"),
         br(),
 
         # Nasty syntax here because of link: https://stackoverflow.com/questions/39132318/shiny-nesting-a-link-within-a-paragraph-has-unwanted-whitespace
@@ -45,6 +45,31 @@ generalTrends <- tabPanel(
           a(href = "https://en.wikipedia.org/wiki/1998%E2%80%9399_NBA_season", "1999 NBA lockout", .noWS = "outside"),
           "."
         )
+      )
+    ),
+    tabPanel(
+      "Player Position by Season",
+      h3("How many players of each position are drafted each year?"),
+      br(),
+      
+      # Get the player position to plot
+      
+      sidebarPanel(
+        selectInput(
+          inputId = "generalTrend.position",
+          label = "Player Position:",
+          choices = positions_english,
+          selected = "Point Guard"
+        ),
+        p("The graph shows the number of players that got drafted as the selected position over every draft season from 1980."),
+        p("There are no obvious trends here, except that Shooting Guards have recently become more popular whereas Small Forwards are on the decline.")
+      ),
+      
+      # Plot the trend for selected player position
+      
+      mainPanel(
+        plotlyOutput("generalTrend.positionPlot", height = "400px"),
+        br()
       )
     )
   )
