@@ -132,7 +132,33 @@ positionModel <- tabPanel(
       )
     ),
     tabPanel(
-      "General Findings"
+      "General Findings",
+      br(),
+      p("These tables give the accuracy and kappa metric for every possible combination of position and college statistic for modeling, where the row names are the explanatory variable and the column names are the dependent variables. Some notable results about my model:"),
+      tags$ul(
+        tags$li(
+          "For point guards, one of the best ways to predict if someone is going to become a point guard in the NBA is to look at their assists per game college statistic.",
+          "This makes sense because as the person who handles the ball, the point guard is usually the one pass to the shooter or the center."
+        ),
+        tags$li(
+          "For centers, one of the better explanatory variables is blocks per game and 3-Point Field Goal Percentage Per Game.",
+          "The latter is interesting because my model also takes into account if a player is bad at doing something.",
+          "Centers rarely shoot threes and thus aren't very good at it, so it makes sense that it can be an identifier of a center."
+        ),
+        tags$li(
+          "My model isn't the best as you can tell from the kappa metric, where the best is around 63%, even though accuracy goes up to approximately 80%.",
+          "Maybe this model can be improved by using multiple college statistics or segmenting the data by year and training separate models for different sets of years, since trends are very much based on year!"
+        )
+      ),
+      p(
+        "These are just some basic observations. Using the tables below, you can compare which college statistic is the best of predicting a specific position.",
+        "However, you can also see what position a college statistic is best at predicting. You'll find some interesting things! (Use the search bar for easy navigation.)"
+      ),
+      h3("Accuracy Percentage of Model Table"),
+      DTOutput("positionModel.accuracyTable"),
+      br(),
+      h3("Kappa Percentage of Model Table"),
+      DTOutput("positionModel.kappaTable")
     )
   )
 )

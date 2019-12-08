@@ -40,18 +40,20 @@ kappa_table <- init_table()
 for (position in positions_english) {
   for (stat in stats_per_g_english) {
     results <- get_model_results(position, stat)
-    accuracy_table[stat, position] <- results %>% filter(.metric == "accuracy") %>% pluck(".estimate")
-    kappa_table[stat, position] <- results %>% filter(.metric == "kap") %>% pluck(".estimate")
+    accuracy_table[stat, position] <- round(results %>% filter(.metric == "accuracy") %>% pluck(".estimate"), digits = 2)
+    kappa_table[stat, position] <- round(results %>% filter(.metric == "kap") %>% pluck(".estimate"), digits = 2)
   }
 }
 
 # We spread the values by the Position they play to create a 2-way table
 
 accuracy_df <- as_tibble(accuracy_table, .name_repair = "unique") %>%
-  spread(key = ...2, value = n)
+  spread(key = ...2, value = n) %>%
+  rename("College Statistic" = ...1)
 
 kappa_df <- as_tibble(kappa_table, .name_repair = "unique") %>%
-  spread(key = ...2, value = n)
+  spread(key = ...2, value = n) %>%
+  rename("College Statistic" = ...1)
 
 # Write the values to disk so we don't need to run this code more than once
 # and so our shiny app can use it!

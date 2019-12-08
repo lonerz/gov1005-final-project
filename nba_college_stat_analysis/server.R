@@ -22,6 +22,9 @@ nba_total_stats_wo_tot <- read_rds("nba_total_stats_wo_tot.rds")
 joined_college_stats_nba_position <- read_rds("joined_college_stats_nba_position.rds")
 nba_positions <- read_rds("nba_positions.rds")
 
+accuracy_df <- read_rds("accuracy_df.rds")
+kappa_df <- read_rds("kappa_df.rds")
+
 ############################################################################################
 
 shinyServer(function(input, output) {
@@ -194,7 +197,16 @@ shinyServer(function(input, output) {
         )
       )
   })
+  
+  output$positionModel.accuracyTable <- renderDT({
+    accuracy_df %>%
+      datatable(options = list(dom = "ftp"))
+  })
 
+  output$positionModel.kappaTable <- renderDT({
+    kappa_df %>%
+      datatable(options = list(dom = "ftp"))
+  })
 
 
   #################
