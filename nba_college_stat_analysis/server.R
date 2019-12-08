@@ -199,14 +199,16 @@ shinyServer(function(input, output) {
       )
   })
   
+  # From the server, we serve up the accuracy and kappa table. Nothing fancy here
+  
   output$positionModel.accuracyTable <- renderDT({
     accuracy_df %>%
-      datatable(options = list(dom = "ftp"))
+      datatable(rownames = FALSE, options = list(dom = "ftp"))
   })
 
   output$positionModel.kappaTable <- renderDT({
     kappa_df %>%
-      datatable(options = list(dom = "ftp"))
+      datatable(rownames = FALSE, options = list(dom = "ftp"))
   })
 
 
