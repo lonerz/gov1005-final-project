@@ -19,6 +19,7 @@ write_rds(nba_total_stats_wo_tot, "nba_college_stat_analysis/nba_total_stats_wo_
 ## do some more work for joined NBA positions and college stat table
 
 nba_single_position <- read_csv("final_csv/nba_single_position.csv")
+write_rds(nba_single_position, "nba_college_stat_analysis/nba_single_position.rds")
 
 stats_per_g <- c(
   "g", "gs", "mp_per_g", "fg_per_g", "fga_per_g", "fg_pct", "fg2_per_g", "fg2a_per_g",

@@ -43,6 +43,8 @@ generalTrends <- tabPanel(
         h6(
           "*Notice a large dip in many statistics during the NBA season 1998-1999. This was the ",
           a(href = "https://en.wikipedia.org/wiki/1998%E2%80%9399_NBA_season", "1999 NBA lockout", .noWS = "outside"),
+          ". There was another shorter and more recent lockout in the ",
+          a(href = "https://en.wikipedia.org/wiki/2011_NBA_lockout", "2011-2012 season", .noWS = "outside"),
           "."
         )
       )

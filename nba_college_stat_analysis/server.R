@@ -21,6 +21,7 @@ nba_total_stats_wo_tot <- read_rds("nba_total_stats_wo_tot.rds")
 
 joined_college_stats_nba_position <- read_rds("joined_college_stats_nba_position.rds")
 nba_positions <- read_rds("nba_positions.rds")
+nba_single_position <- read_rds("nba_single_position.rds")
 
 accuracy_df <- read_rds("accuracy_df.rds")
 kappa_df <- read_rds("kappa_df.rds")
