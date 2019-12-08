@@ -12,7 +12,7 @@ Many statistics are measured about a player, like their field goal percentage, t
 
 ## The Data
 
-The data for players in the NBA is scraped from [Basketball Reference](https://www.basketball-reference.com). The college player statistics is scraped from [Sports Reference College Basketball](https://www.sports-reference.com/cbb/).
+The data for players in the NBA is scraped from [Basketball Reference](https://www.basketball-reference.com). The college player statistics is scraped from [Sports Reference College Basketball](https://www.sports-reference.com/cbb/). My scraper scraped over 4000 different players, their NBA statistics and corresponding college basketball statistics and matched them together. I used BeautifulSoup for majority of the webpage processing. The matching process required me to manually match 100 different players (their NBA statistics with their college statistics). You can find the scraping code on my Github [here](https://github.com/lonerz/nba_college_stat_analysis/tree/master/scraper_stuff).
 
 ## About Me: Joshua Pan
 
@@ -20,4 +20,4 @@ I'm currently a sophomore at Harvard University, studying Computer Science with 
 
 ## Source Code
 
-You can check the source code out on [GitHub](https://github.com/lonerz/gov1005-final-project).
+You can check the source code out on [GitHub](https://github.com/lonerz/nba_college_stat_analysis/).
