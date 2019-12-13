@@ -193,7 +193,8 @@ shinyUI(fluidPage(
     funFacts,
     tabPanel(
       "About",
-      includeMarkdown("about.md")
+      includeMarkdown("about.md"),
+      tags$video(src = "pitch.mp4", type = "video/mp4", controls = "controls", width = "500px", height = "350px")
     )
   )
 ))
