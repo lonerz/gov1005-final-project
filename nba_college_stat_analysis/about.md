@@ -20,4 +20,4 @@ I'm currently a sophomore at Harvard University, studying Computer Science with 
 
 ## Source Code
 
-You can check the source code out on [GitHub](https://github.com/lonerz/nba_college_stat_analysis/). You can also watch my video below and read my [paper](/report.pdf)!
+You can check the source code out on [GitHub](https://github.com/lonerz/nba_college_stat_analysis/). You can also watch my video below and read my [paper](https://joshuapan.shinyapps.io/nba_college_stat_analysis/report.pdf)!
